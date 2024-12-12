@@ -17,7 +17,7 @@ class MoviedbDatasource extends MoviesDatasources {
   @override
   Future<List<Movie>> getNowPlaying({int page = 1}) async {
     dio.options.headers['Authorization'] =
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MzdjOTU0ZGU5NjQwMTRhNDJiOGIyOTc4NWRjY2Q0ZCIsIm5iZiI6MTczMzkxOTYzMi43Mjk5OTk4LCJzdWIiOiI2NzU5ODM5MGVmMjY5ZDBiODhlM2E0MTYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.NmKN7XZe9R4mCFYi_RR2A3Y9gF2bfzz53OdhCv99jUI';
+        'Bearer ${Environment.theMovieDbToken}';
     final response = await dio.get('/movie/now_playing');
     final movieDBResponse = MovieDbResponse.fromJson(response.data);
 
