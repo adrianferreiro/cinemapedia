@@ -10,3 +10,7 @@
 
 1. CustomBottomNavigationBar
    https://www.youtube.com/watch?v=HB5WMcxAmQQ
+
+# NOTAS:
+
+1. Sliver: es un widget que trabaja directamente con el scrollview. Lo utilizamos en éste ejemplo para ocultar y mostrar la barra de búsqueda al hacer el scroll.
