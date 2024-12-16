@@ -44,4 +44,14 @@ class MoviedbDatasource extends MoviesDatasources {
     });
     return _jsonToMovies(response.data);
   }
+
+  @override
+  Future<List<Movie>> getUpcoming({int page = 1}) async {
+    dio.options.headers['Authorization'] =
+        'Bearer ${Environment.theMovieDbToken}';
+    final response = await dio.get('/movie/upcoming', queryParameters: {
+      'page': page,
+    });
+    return _jsonToMovies(response.data);
+  }
 }
