@@ -12,7 +12,7 @@ class CreditsResponse {
   factory CreditsResponse.fromJson(Map<String, dynamic> json) =>
       CreditsResponse(
         id: json["id"],
-        cast: List .from(json["cast"].map((x) => Cast.fromJson(x))),
+        cast: List.from(json["cast"].map((x) => Cast.fromJson(x))),
         crew: List<Cast>.from(json["crew"].map((x) => Cast.fromJson(x))),
       );
 
@@ -69,7 +69,7 @@ class Cast {
         character: json["character"],
         creditId: json["credit_id"],
         order: json["order"],
-        department: json["department"]!,
+        department: json["department"],
         job: json["job"],
       );
 
